@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../caoloc/style.css">
+    <!-- <link rel="stylesheet" href="../tannv/Registration/style.css"> -->
+    <script src="../caoloc/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <h1>Sign Up</h1>
+            <br>
+        </div>
+        <div class="main-input">
+            <div class="notify" id="error1"></div>
+            <input id="username" type="text" placeholder="Username" required>
+            <br>
+            <br>
+            <!-- <br> -->
+            <div class="notify2" id="error2"></div>
+            <input id="password" type="password" placeholder="Password" required>
+        </div>
+        <div>
+            <br>
+            <input name="checky" id="checky" value="1" type="checkbox" checked="true"/>
+            <label style="margin-right: 120px;">Remember me</label>
+            </label><a class="form-recovery" href="#">Forgot Password?</a>
+        </div>
+
+        <div class="main-button">
+            <br>
+            <input type="submit" value="LOGIN" onclick="login()">
+            <br>
+            
+        </div>
+        <br>
+        <div class="register">
+            <label for=""><a href="../tannv/Registration/registration.html">Register</a> here?</label>
+            <!-- <a href="../caoloc/html/index.html"></a> -->
+        </div>
+    </div>
+</body>
+
+</html>

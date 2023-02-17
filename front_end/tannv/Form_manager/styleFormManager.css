@@ -1,0 +1,47 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.main_form_manager{
+    /* max-width:520px ; */
+    /* height: 200px; */
+    /* height: 200px; */
+    /* height: 200px; */
+    height: auto;
+    background-color: rgb(243, 240, 235);
+    border: 1px solid #333;
+}
+td,th{
+    /* margin: auto; */
+    text-align: center;
+    border: 1px solid #fff;
+   
+    /* width: 798px; */
+    height:30px;
+    background-color: #e8dff1;
+    color: hsl(0, 19%, 15%);
+    /* box-shadow: 10px 0 0 0 black; */
+    /* box-shadow: 3px 3px 8px #ada8a8; */
+}
+.table_search{
+    border-collapse: collapse;
+    width: 100%;
+}
+.btn_search,.btn_create_new,.btn{
+    width: 200px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #fff;
+}
+.input_username,.input_status{
+    width: 90%;
+    height: 18px;
+    outline: none;
+    border: 0px solid;
+}
+.status_icon{
+    margin: auto;
+    border-radius: 10px;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+}

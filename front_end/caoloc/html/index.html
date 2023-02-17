@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/index.js"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../../caoloc/JS/logout.js"></script>
+    <script src="../../caoloc/JS/details_user.js"></script>
+    <script src="../login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../tannv/Form_manager/styleFormManager.css">
+    <title>Dashboards</title>
+</head>
+
+<body onload="info_user() , GetNameUser()">
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <!-- <a href="#"><img src="../image/logo.jpg" alt=""></a> -->
+            <h2>LOGO</h2>
+            <a style="text-align: center;" class="icon" onclick="tat()">
+                <i onclick="myFunction(this)" class="fa fa-plus-circle"></i>
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="avatar">
+                <img onclick="hieninfo()" src="../image/avatar.jpeg" alt="">
+                <p><span class="name_user"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+
+        <div class="menu">
+            <ul class="ul">
+                <li><a class="sub-btn" href="#">Dashboards <img class="dropdown" src="../image/chevron-right.svg"
+                            alt=""></a>
+                    <ul class="sub-menu">
+                        <li class="sub-user"><a href="#">User</a></li>
+                        <li><a href="#">Access rights</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="sub-btn" href="#">Pages <img class="dropdown" src="../image/chevron-right.svg" alt=""></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Login Boxed</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Register Boxed</a></li>
+                        <li><a href="#">Forgot Password</a></li>
+                        <li><a href="#">Forgot Password Boxed</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="sub-btn" href="#">Applications <img class="dropdown" src="../image/chevron-right.svg"
+                            alt=""></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Mailbox</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Material Tabs</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="sub-btn" href="#">Components <img class="dropdown" src="../image/chevron-right.svg"
+                            alt=""></a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Mailbox</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Material Tabs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <div>
+                <table class="table_search">
+                    <tr>
+                        <td style="width:30%">
+                            <label for="">Card Number</label>
+                        </td>
+                        <td>
+                            <input type="text" id="cardNumber" name="input_username" class="input_username"><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Status</label>
+                        </td>
+                        <td>
+                            <input type="text" class="input_status">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <input type="button" onclick=" search()" class="btn_search" value="Search">
+                            <input type="button" onclick="Hienthi()" class="btn" value="List Users">
+                            <input type="button" class="btn_create_new" value="Create New User">
+                        </td>
+                    </tr>
+                </table>
+                <!-- Search Result -->
+                <table id="getSearch" class="data table_search" style="margin-top: 5px;">
+
+                </table>
+
+                <!-- Create New/ Update -->
+            </div>
+            <div class="Create_new">
+                <table class="table_search">
+                    <tr>
+                        <td style="width:30%">
+                            <label for="">Card Number</label>
+                        </td>
+                        <td>
+                            <input type="text" name="input_create_card_number" class="input_username"><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Card Name</label>
+                        </td>
+                        <td>
+                            <input type="text" name="input_create_card_name" class="input_status">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Create Date</label>
+                        </td>
+                        <td>
+                            <input type="date" name="input_create_create_date" class="input_status">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Expire Date</label>
+                        </td>
+                        <td>
+                            <input type="date" name="input_create_expire_date" class="input_status">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Role</label>
+                        </td>
+                        <td>
+                            <select type="text" class="input_status">
+                                <option value="">Admin</option>
+                                <option value="">User</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <input type="button" onclick="create_new()" class="btn" value="Create">
+                            <input type="button" onclick="clearTextbox()" class="btn" value="Clear">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="information">
+                <div class="avatar">
+                    <img src="../image/avatar.jpeg" alt="">
+                    <p><span class="fullname_user"></span></p>
+                    <button onclick="log_out()">Logout</button>
+                </div>
+                <div class="info">
+                    <span class="info-user-name"> </span>
+                    <span class="info-full-name"></span>
+                    <span class="info-age"></span>
+                    <span class="info-gender"></span>
+                    <span class="info-telephone"></span>
+                    <span class="info-email"></span>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.sub-btn').click(function () {
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+
+            $('.sub-user').click(function () {
+                $(this).parents('.menu').next('.search').slideToggle();
+            });
+
+            $('.btn_create_new').click(function () {
+                $(this).parents('div').next('.Create_new').slideToggle();
+            });
+            $('.active').click(function () {
+                $(this).val('Deactive');
+            });
+        });
+
+
+    </script>
+
+    <script>
+        function tat() {
+            var x = document.querySelector(".menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+        function myFunction(x) {
+            x.classList.toggle("fa-minus-circle");
+        }
+        function hieninfo() {
+            var x = document.querySelector(".information");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

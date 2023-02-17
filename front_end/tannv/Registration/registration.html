@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Registration/style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../Registration/test.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet'
+        type='text/css'>
+</head>
+
+<body>
+        <table >
+            <tr>
+                <td colspan="2" style="border-bottom: 1px solid #e8d3d3 ;">
+                    <h1>REGISTRATION</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" name="fullname" id="fullname" placeholder="Fullname">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" name="username" id="username" placeholder="Username" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="password" name="password" id="password" placeholder="Password" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="number" name="age" min="1" placeholder="Age" >
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%">
+                    <input type="radio" name="gender" checked="true" value="Nam"><label style="margin-left: 10px;">Male</label>
+                </td>
+                <td style="width:50%">
+                    <input type="radio" name="gender" value="Nữ"  style="margin-left:0px;"><label style="margin-left: 10px;">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="number" name="telephone" min="0" placeholder="Telephone" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="email" name="email" placeholder="Email">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <p style="margin: 35px auto 0px auto;">Back to <a href="../../caoloc/login.html"><b style="color: red">Login</b></a> </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="register()">Register</button>
+                </td>
+            </tr>
+        </table>
+</body>
+
+</html>
